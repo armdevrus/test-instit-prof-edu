@@ -1,0 +1,61 @@
+// @use '../../components/App/vars' as v;
+@import "../../components/App/vars";
+
+.f {
+  display: flex;
+  column-gap: 30px;
+}
+.f-left {
+  background-color: $backgroundColorLeft;
+  padding: 40px 60px;
+  flex: 1;
+  position: relative;
+}
+.f-left::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom: 40px solid #CD1800;
+  border-right: 40px solid transparent;
+}
+.f-left::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 40px solid $background;
+  border-left: 40px solid transparent;
+}
+.f-left h2,
+p,
+.f-right h2,
+.f-item {
+  color: $background;
+}
+.f-left p,
+.f-right ul {
+  font-weight: 300;
+}
+.f-title {
+  margin-top: 0;
+}
+.f-right {
+  background-color: $backgroundColorRight;
+  padding: 40px 45px;
+  flex: 1;
+}
+.f-list {
+  list-style: none;
+  padding-left: 15px;
+}
+.f-item{
+    position: relative;
+}
+.f-item::before {
+  content: "•";
+  color: $backgroundColorLeft;
+  position: absolute;
+  left: -17px;
+  transform: scale(150%);
+}
