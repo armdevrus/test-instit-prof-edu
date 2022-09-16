@@ -2,7 +2,7 @@
 
 .s {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   background-color: $background;
 }
 
@@ -11,4 +11,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 31px 313px 45px 313px;
+}
+
+@media screen and (max-width: 375px) {
+  .s-wrapper{
+    padding: 20px 15px ;
+  }
 }

@@ -37,7 +37,7 @@ export default function SpecialSubjects() {
         {loading && <h1>{loading}</h1>}
         {allPrograms &&
           allPrograms.map((program) => (
-            <Content
+            <Content key={program.title}
             title={program.title} specializedSubjects={program.specializedSubjects}   />
           ))}
         <Footer />
